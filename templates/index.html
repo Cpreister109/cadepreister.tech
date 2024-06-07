@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+    </head>
+    <body>
+        <div class="body_container">
+            <div>
+                <a href="/">
+                    <img href="/" src="{{ url_for('static', filename='images/website_logo.png') }}" alt="Example Image" class="logo">
+                </a>
+                <a class="links_container" href="/">Home</a>
+                <a class="links_container" href="/projects">Projects</a>
+                <a class="links_container" href="/about">About</a>
+                <a class="links_container" href="/github">Github ↗</a>
+            </div>
+            <div class="content_container">
+                
+                {% block content %}
+                <li><a href="{{ url_for(options[o]) }}">{{ o }}</a></li>
+                {% endblock %}
+                {% block scripts %}{% endblock %}
+
+            </div>
+        </div>
+    </body>
+</html>

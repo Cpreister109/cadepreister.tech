@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <h1 style="font-size: 38px;">Welcome to cadepreister.tech!</h1>
+    <div class="home_container">
+        <p>On this website you will be able to find a multitude of different projects and resources that show some of the expiriences I have had with software engineering and information technology throughout my education. As well as my accolades. Thank you for visiting and I hope you enjoy learning about everything I built.</p>
+    </div>
+    <div>
+        <h3>Some of my projects not found on Github:</h3>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="{{ url_for('static', filename='images/blog_website.png') }}" style="width:100%">
+            <div class="description">Blog Site</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="{{ url_for('static', filename='images/ToDo_central.png') }}" style="width:100%">
+            <div class="description">Task List Webpage</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="{{ url_for('static', filename='images/URL_shortener.png') }}" style="width:100%">
+            <div class="description">URL Shortener</div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000);
+        }
+    </script>
+{% endblock %}

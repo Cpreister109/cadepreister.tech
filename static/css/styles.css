@@ -1,0 +1,169 @@
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/background.jpg');
+    color: #ffffff
+}
+
+.logo {
+    margin: 10px 10px;
+    width: 400px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+.body_container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 20px;
+}
+
+.links_container {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 50px;
+}
+
+.content_container {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    width: 1000px;
+    max-height: 3000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333333c5;
+    border-radius: 10px;
+}
+
+.links_container {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 50px;
+    margin: 70px 50px;
+    background-color: #444444;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.links_container:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.project_container {
+    background-color: rgba(85, 191, 227, 0.624);
+    padding: 10px 20px;
+    margin: 10px 10px;
+}
+
+.home_container {
+    font-size: 18px;
+    line-height: 1.5;
+    text-indent: 2em;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    border-radius: 10px;
+}
+
+img {
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.description {
+    position: absolute;
+    font-size: 28px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 98%;
+    text-align: center;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.semester_img {
+    margin: 10px 20px;
+    width: 950px;
+    height: 400px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fall2024_img {
+    margin: 10px 20px;
+    width: 950px;
+    height: 320px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.accolades_list li {
+    font-size: 16px;
+    margin: 10px 25px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: rgba(85, 191, 227, 0.624);
+    padding: 5px;
+}
+
+.languages_container {
+    margin-top: 100px;
+}
+
+.lang_img {
+    margin: 10px 73px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.error_container {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+}
+
+.error_container img{
+    height: 100px;
+    width: 100px;
+    margin: 10px 50px;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+@media (max-width: 768px) {
+    .links_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links_container a {
+        margin: 10px 0;
+    }
+}

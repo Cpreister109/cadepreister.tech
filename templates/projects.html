@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2 style="text-align: center;">Click on any project to find the Source Code <a href="https://github.com/Cpreister109" style="color: lightskyblue;">@Cpreister109</a> on Github</h2>
+        {% for key in projects_dict.keys() %}
+            <div class="project_container">
+                <a href="{{ projects_dict[key][0] }}" style="font-size: 20px; text-decoration: none; color: white; font-weight: bold;">{{ key }}</a>
+                <p style="font-size: 16px;">{{ projects_dict[key][1] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

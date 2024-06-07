@@ -1,0 +1,42 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="about_container">
+        <h1>Why technology?</h1>
+        <p class="home_container">I have always been fascinated by the the tech industry. Before entering my major I had little to no knowledge when it came to how different applications or systems worked behind the scenes. There have been many steep learning curves in this field that were frustrating and confusing. But it is so satisfying each time one of these obstacles is overcome. I am looking forward to many more of these moments in my future. The most useful tool I have learned is that it is best to dive in head first and try something even if you don't know as much as you would like too.</p>
+    </div>
+    <div class="languages_container">
+        <h1>Languages:</h1>
+        <img class="lang_img" src="{{ url_for('static', filename='images/python_logo.jpeg') }}">
+        <img class="lang_img" src="{{ url_for('static', filename='images/csharp_logo.png') }}">
+        <img class="lang_img" src="{{ url_for('static', filename='images/HTML_logo.png') }}">
+        <img class="lang_img" src="{{ url_for('static', filename='images/CSS_logo.png') }}">
+        <p class="lang_img">Python</p>
+        <p class="lang_img">C-Sharp</p>
+        <p class="lang_img">HTML</p>
+        <p class="lang_img">CSS</p>
+    </div>
+    <div class="grades_container">
+        <h1>Grades:</h1>
+        <h3>Fall 2023</h3>
+        <img class="semester_img" src="{{ url_for('static', filename='images/Fall_2023.png') }}">
+        <h3>Spring 2024</h3>
+        <img class="semester_img" src="{{ url_for('static', filename='images/Spring_2024.png') }}">
+        <h3>Fall 2024</h3>
+        <p>(Not taken yet, current cumulative GPA in top right corner)</p>
+        <img class="fall2024_img" src="{{ url_for('static', filename='images/Fall_2024.png') }}">
+    </div>
+    <div class="accolades_container">
+        <h1>Accolades:</h1>
+        <ul class="accolades_list">
+            <li>Cumulative GPA: 3.603</li>
+            <li>Fall 2023: Chancellor's List</li>
+            <li>Spring 2024: Dean's List</li>
+            <li>High School Diploma</li>
+        </ul>
+    </div>
+{% endblock %}

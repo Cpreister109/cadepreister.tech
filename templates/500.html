@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="error_container">
+        <h2>500 ERROR: Problem on our end, this will soon be fixed. Check back later!</h2>
+        <img src="{{ url_for('static', filename='images/onoes.jpeg') }}">
+    </div>
+{% endblock %}
