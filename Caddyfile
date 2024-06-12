@@ -1,3 +1,3 @@
-cadepreister.dev {
+http://3.145.109.21 {
     reverse_proxy localhost:8000
 }
